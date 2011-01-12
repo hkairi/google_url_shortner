@@ -8,6 +8,7 @@ gem install google_url_shortner
 
 == Utilisation
 
+require "rubygems"
 require "google_url_shortner"
 
 client = Google::Shortner.new("http://www.google.com")
