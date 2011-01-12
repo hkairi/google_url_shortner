@@ -12,7 +12,7 @@ require 'rake'
 require 'jeweler'
 Jeweler::Tasks.new do |gem|
   # gem is a Gem::Specification... see http://docs.rubygems.org/read/chapter/20 for more options
-  gem.name = "googl"
+  gem.name = "google_url_shortner"
   gem.homepage = "http://github.com/hkairi/google_url_shortner"
   gem.license = "MIT"
   gem.summary = %Q{Client Ruby pour accèder à l'API Google URL Shortener.}
