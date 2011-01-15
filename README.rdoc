@@ -6,14 +6,43 @@ Client Ruby pour accèder à l'API Google URL Shortener.
 
 gem install google_url_shortner
 
+
+= Nouveautés :
+
+-- Google::UrlShortner::Analytics -- 
+Cette classe nous donne un accès complet aux analytics de Url Shortner :
+
+* visiteurs
+* plateformes
+* navigateurs
+* pays 
+
+-- Google::UrlShortner::Client -- 
+Shorten et Expand pour encoder et décoder une adress.
+
+Exemple :
+
+-- Google::UrlShortner::Client.shorten( long_url ) -- 
+
+-- Google::UrlShortner::Client.expand( short_url) -- 
+
 == Utilisation
+
+
+pre.
 
 require "rubygems"
 
 require "google_url_shortner"
 
-client = Google::Shortner.new("http://www.google.com")
+Création d'un client connecté à l'API Google Url Shorten
 
-puts client.short_url 
+client = Google::UrlShortner::Client.new
 
-== 
+# Shortening an url.
+
+resp = client.shorten("http://www.gtug-dakar.org")
+
+#Getting analytics.
+
+analytics = client.get_analytics_for(resp.short_url)
