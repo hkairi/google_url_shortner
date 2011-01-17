@@ -46,3 +46,11 @@ resp = client.shorten("http://www.gtug-dakar.org")
 #Getting analytics.
 
 analytics = client.get_analytics_for(resp.short_url)
+
+analytics.visitors      # => le nombre de visiteurs de l'url encodé
+
+analytics.countries     # => les pays depuis lesquels l'url a été visité
+
+analytics.platforms     # OS utilisés par les clients
+
+analytics.browsers      # Navigateurs/agents utilisés 
